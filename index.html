@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QWERy</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            color:white;
+        }
+        body{
+            width:100%;
+            height:100%;
+        }
+        .box1{
+            width:100%;
+            height:100vh;
+            background-image:url(beautiful-sunset-mountain-lake-with-mountain-background_912721-54.avif),
+            url(gray-solid-color-background.jpg);
+            mask-image: url(gray-solid-color-background.jpg);
+            mask-size: 100% cover;
+            background-blend-mode:multiply;
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+        nav{
+            width:100%;
+            display:flex;
+            align-items:center;
+            justify-content:space-around;
+        }
+        nav .text1 h1{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:25px;
+        }
+        .text1 h1 span{
+            color:rgb(237, 180, 73);
+        }
+        nav .links ol{
+            display:flex;
+            list-style:none;
+            padding:20px
+        }
+        nav .links ol li{
+            padding:15px;
+        }
+        nav .links ol li a{
+            text-decoration:none;
+            transition:all 1s;
+            font-size:18px;
+        }
+        .links ol li a:hover{
+            color:orange;
+        }
+        .links ol li a:active{
+            color:red;
+        }
+        nav .icons{
+            display:flex;
+        }
+        .icons p,.bx{
+            padding:10px;
+            font-size:17px;
+        }
+        .icons .bx:hover{
+            color:orange;
+            cursor:pointer;
+        }
+        .box1 .paras{
+            margin:150px 0px 0px 120px;
+        }
+        .paras span{
+            color:rgb(237, 180, 73);
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            letter-spacing:2px;
+        }
+        .paras h2{
+            font-size:80px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .paras p{
+            margin-bottom:35px;
+            opacity:0.9;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        button{
+            width:120px;
+            height:40px;
+            background-color:transparent;
+            border:2px solid white;
+            border-radius:5px;
+            transition:all 1s;
+        }
+        button:hover{
+            background-color:rgb(245, 159, 1);
+            border:2px solid rgb(245, 159, 1);
+            color:black;
+        }
+        /* box2 */
+        .box2{
+            background-color:black;
+            width:100%;
+            height:102vh;
+        }
+        .img-circle{
+            width:100%;
+            height:200px;
+            /* background-color:rgb(2, 245, 38); */
+            display:flex;
+            align-items:center;
+            justify-content:space-around;
+        }
+        .circles{
+            width:100px;
+            height:100px;
+            /* background-color:red; */
+            border-radius:50%;
+            transition:1s;
+        }
+        .circles:hover{
+            box-shadow:0px 0px 20px white;
+        }
+        .img2{
+            width:100px;
+            height:100px;
+            border-radius:50%;
+        }
+        .p1 p{
+            margin-top:10px;
+            margin-left:10px;
+            font-size:14px;
+        }
+        .left-text{
+            width:100%;
+            height:600px;
+            /* background-color:blue; */
+            display:flex;
+            align-items:center;
+            justify-content:space-evenly;
+        }
+        .left-img{
+            width:350px;
+            height:450px;
+            /* background-color:aqua; */
+            border-radius:10px;
+            margin-left:-10%;
+            margin-top:-5%;
+        }
+        .img3{
+            width:350px;
+            height:500px;
+            border-radius:10px;
+        }
+        .right-text{
+            width:500px;
+            height:500px;
+            /* background-color:red; */
+            margin-left:-10%;
+        }
+        .right-text>div{
+            margin-top:10%;
+        }
+        .right-text>div span{
+            color:orange;
+            letter-spacing: 2px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .right-text>div h1{
+            font-size:50px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-bottom:15px;
+        }
+        .right-text>div p{
+            opacity:0.9;
+            margin-bottom:20px;
+        }
+        .right-text>div button{
+            width:130px;
+            height:40px;
+            background-color:transparent;
+            border:2px solid white;
+            border-radius:5px;
+            transition:all 1s;
+        }
+        .right-text>div button:hover{
+            background-color:rgb(245, 159, 1);
+            border:2px solid rgb(245, 159, 1);
+            color:black;
+        }
+        .box3{
+            width:100%;
+            height:100vh;
+            background-color:black;
+        }
+        .box3 h1{
+            text-align:center;
+            font-size:30px;
+            font-weight:700;
+            padding-top:20px;
+        }
+        .box4{
+            width:86%;
+            height:420px;
+            /* background-color:red; */
+            margin:50px;
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            justify-content:space-evenly;
+            padding:50px;
+        }
+        .images-boxs{
+            width:280px;
+            height:380px;
+            /* background-color:aqua; */
+            border-radius:10px;
+            object-fit:cover;
+            position:relative;
+        }
+        .img-boxs{
+            width:280px;
+            height:380px;
+            border-radius:10px;
+            object-fit:cover;
+        }
+        .images-boxs p{
+            position:absolute;
+            top:85%;
+            bottom:50px;
+        }
+        .images-boxs .p2{
+            padding:20px;
+            font-size:20px;
+            font-weight:600;
+            margin-top:-30px;
+        }
+        .images-boxs:hover{
+            scale:1.1;
+            border:1px solid rgb(255, 255, 255);
+        }
+        .box5{
+            width:100%;
+            height:100vh;
+            background-color:black;
+        }
+        .box6{
+            width:100%;
+            height:90%;
+            /* background-color:red; */
+            margin-top:30px;
+            display:flex;
+            align-items:center;
+            justify-content:space-evenly;
+        }
+        .rights{
+            width:550px;
+            height:450px;
+            /* background-color:aquamarine; */
+        }
+        .rights span{
+            color:orange;
+            letter-spacing:3px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:20px;
+        }
+        .rights h2{
+            padding:15px  0px 0px 0px;
+            font-size:55px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .rights p{
+            margin:20px 0px 20px 0px;
+            opacity:0.8;
+        }
+        .lefts{
+            width:350px;
+            height:550px;
+            /* background-color:rosybrown; */
+            border-radius:10px;
+        }
+        .lefts .img6{
+            width:350px;
+            height:550px;
+            border-radius:10px;
+            object-fit: 100% cover;
+        }
+        .box8{
+            width:100%;
+            height:100px;
+            background-color:rgb(0, 0, 0);
+            display:flex;
+            align-items:center;
+            justify-content:space-around;
+        }
+        .text-h h3{
+            font-size:50px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .text-h p{
+            line-height:30px;
+            opacity:0.8;
+        }
+        .input-box input[type="email"]{
+            width:400px;
+            height:30px;
+            background-color:rgba(43, 40, 40, 0.801);
+            border:none;
+            margin-right:20px;
+            border-radius:5px;
+            padding:9px;
+            outline:none;
+        }
+        .links-box{
+            width:100%;
+            height:250px;
+            background-color:rgb(0, 0, 0);
+            padding:60px;
+            display:flex;
+            align-items:center;
+            justify-content:space-evenly;
+            padding-top:100px;
+        }
+        .services{
+            width:300px;
+            height:300px;
+            /* background-color:antiquewhite; */
+            padding:50px;
+        }
+        .services ol{
+            list-style:none;
+        }
+        .services ol p{
+            font-size:25px;
+            margin-bottom:30px;
+            font-weight:600;
+            margin-left:10px;
+            cursor:pointer;
+        }
+        .services ol li{
+            padding:10px;
+            font-size:19px;
+            opacity:0.8;
+        }
+        .services ol li:hover{
+            cursor:pointer;
+            color:white;
+            opacity:1;
+        }
+        .services .bx{
+            font-size:25px;
+            position:relative;
+            left:3px;
+            top:3px;
+        }
+        .services .bx:hover{
+            color:orange;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <section class="box1">
+        <nav>
+            <div class="text1">
+                <h1>QWE<span>Ry</span></h1>
+            </div>
+            <div class="links">
+                <ol>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#Information">Information</a></li>
+                    <li><a href="#Adout-us">Adout us</a></li>
+                    <li><a href="#culture">Culture</a></li>
+                    <li><a href="#contact-us">Contact us</a></li>
+                </ol>
+            </div>
+            <div class="icons">
+                <p>Follow us</p>
+                <i class='bx bxl-instagram-alt'></i>
+                <i class='bx bxl-twitter' ></i>
+                <i class='bx bxl-facebook' ></i>
+            </div>
+        </nav>
+        <div class="paras">
+            <span>LET'S.</span>
+            <h2>Planning your<br/>own travel</h2>
+            <p>Indonesia, a sutheast Aisn nation mode up of thousands of volcanic <br/>islands,
+            is home to hundreds of ethic groups speeaking</p>
+            <button>Book a Trip</button>
+        </div>
+    </section>
+    <section class="box2" id="Information">
+        <div class="img-circle">
+            <div class="circles">
+                <img src="skitours.jpeg" alt="pic no" title="" class="img2"/>
+                <div class="p1"style="margin-left:14px;"><p>Ski tours</p></div>
+            </div>
+            <div class="circles">
+                <img src="Excursiontours.jpg" alt="pic no" title="" class="img2"/>
+                <div class="p1"><p>Excursion tours</p></div>
+            </div>
+            <div class="circles">
+                <img src="shoptours.jpg" alt="pic no" title="" class="img2"/>
+                <div class="p1" style="margin-left:14px;"><p>shop tours</p></div>
+            </div>
+            <div class="circles">
+                <img src="SPAtours.jpeg" alt="pic no" title="" class="img2"/>
+                <div class="p1" style="margin-left:14px;"><p>SPA tours</p></div>
+            </div>
+            <div class="circles">
+                <img src="weddingtours.jpg" alt="pic no" title="" class="img2"/>
+                <div class="p1"><p>wedding tours</p></div>
+            </div>
+        </div>
+        <div class="left-text">
+            <div class="left-img">
+                <img src="drymountain.jpg" alt="pic no" title="" class="img3"/>
+            </div>
+            <div class="right-text">
+                <div>
+                <span>EAST NUSA TENGGA</span>
+                <h1>Have you enjoyed <br/>your holiday</h1>
+                <p>Indonesia, a sutheast Aisn nation mode up of thousands of volcanic islands,
+                    is home to hundreds of ethic groups speeaking
+                    Indonesia, a sutheast Aisn nation mode up of thousands of volcanic islands,
+                    is home to hundreds of ethic groups speeaking
+                    Indonesia, a sutheast Aisn nation mode up of thousands of volcanic islands,
+                    is home to hundreds of ethic groups speeaking
+                    Indonesia, a sutheast Aisn nation mode up of thousands of volcanic islands,
+                    is home to hundreds of ethic groups speeaking</p>
+                    <button>Read more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="box3">
+        <h1>Popular Tours</h1>
+        <div class="box4">
+            <div class="images-boxs">
+            <img src="mountbromo.jpeg" alt="pic no" title="" class="img-boxs"/>
+            <p class="p2">Mount Bromo</p>
+            </div>
+            <div class="images-boxs">
+                <img src="mount bromo1.jpeg" alt="pic no" title="" class="img-boxs"/>
+                <p class="p2">Mount Bromo</p>
+                </div>
+                <div class="images-boxs">
+                    <img src="mountbromo2.jpg" alt="pic no" title="" class="img-boxs"/>
+                    <p class="p2">Mount Bromo</p>
+                    </div>
+        </div>
+        <button style="position:relative; top:0%; left:50%; transform:translateX(-50%); margin-top:-100px;">See Tours</button>
+    </scetion>
+    <section id="culture" class="box5">
+        <div class="box6">
+            <div class="rights">
+                <span>INDONESIAN CULTURE</span>
+                <h2>Our culture here is very friendly to people</h2>
+                <p>Indonesia, a sutheast Aisn nation mode up of thousands of volcanic islands,
+                    is home to hundreds of ethic groups speeaking
+                    Indonesia, a sutheast Aisn nation mode up of thousands of volcanic islands,
+                    is home to hundreds of ethic groups speeaking</p>
+                    <button style="margin-left:2px;">Read more</button>
+            </div>
+            <div class="lefts">
+                <img src="towgirls.jpg" alt="pic no" title="" class="img6"/>
+            </div>
+        </div>
+    </section>
+    <section id="contact-us" class="box8">
+        <div class="text-h">
+            <h3>Ready to explore?</h3>
+            <p>Lets go on vacation,Make your day</p>
+        </div>
+        <div class="input-box">
+            <input type="email" id="email" name="email" placeholder="Enter your email.." required>
+            <button re>Get started</button>
+        </div>
+    </section>
+    <section id="Adout-us" class="links-box">
+        <div class="services">
+            <ol>
+                <p>Services</p>
+                <li> Email marketing</li>
+                <li>Camparigns</li>
+                <li>Branding</li>
+                <li>Offline</li>
+            </ol>
+        </div>
+        <div class="services">
+            <ol>
+                <p>About</p>
+                <li>Our Story</li>
+                <li>Benefits</li>
+                <li>Team</li>
+                <li>Careers</li>
+            </ol>
+        </div>
+        <div class="services" style="margin-top:-5px;">
+            <ol>
+                <p>Help</p>
+                <li> FAQs</li>
+                <li>Contact Us</li>
+            </ol>
+        </div>
+        <div class="services" style="margin-top:-5px;">
+            <ol>
+                <p>Social</p>
+                <div style="width:50px; height:50px; background-color:rgba(43, 40, 40, 0.801); border-radius:50%; margin-bottom:10px;"><i class='bx bxl-instagram-alt'></i></div>
+                <div style="width:50px; height:50px; background-color:rgba(43, 40, 40, 0.801); border-radius:50%; margin-bottom:10px;"><i class='bx bxl-twitter'></i></div>
+                <div style="width:50px; height:50px; background-color:rgba(43, 40, 40, 0.801); border-radius:50%; margin-bottom:10px;"><i class='bx bxl-facebook' ></i></div>
+            </ol>
+        </div>
+    </section>
+</body>
+</html>
